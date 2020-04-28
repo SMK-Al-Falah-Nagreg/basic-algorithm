@@ -69,5 +69,28 @@ public class Main {
     }
     System.out.println("Sum Total Odd Number : " + sumTotalOddNumber);
 
+    pyramid();
+
+  }
+
+  private static void pyramid() {
+    Scanner in = new Scanner(System.in);
+    
+    System.out.println();
+    System.out.println("Enter total rows : ");
+
+    try {
+      System.out.println("Day 4 : Pyramid");
+      int row = in.nextInt();
+
+      for (int i = 1; i <= row; i++) {
+        for (int j = 0; j < i; j++) {
+          System.out.print("*");
+        }
+        System.out.println();
+      }
+    } catch(Exception e) {
+      e.printStackTrace();
+    }
   }
 }
