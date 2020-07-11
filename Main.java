@@ -1,5 +1,7 @@
 import java.util.*;
 
+import search.BinarySearch;
+
 public class Main {
 
   private static Scanner in;
@@ -29,8 +31,21 @@ public class Main {
     // println("Day 7 : Factorial");
     // factorial();
 
-    println("Day 9 : Six Checker");
-    sixChecker();
+    // println("Day 9 : Six Checker");
+    // sixChecker();
+
+    println("Binary Search");
+    BinarySearch bs = new BinarySearch();
+
+    int arr[] = { 1, 2, 3, 4, 5 };
+    int n = arr.length;
+    int x = 3;
+    int result = bs.binarySearch(arr, 0, n - 1, x);
+
+    if (result < 0)
+      println("Data not found!");
+    else
+      print("kapanggih " + (result + 1));
   }
 
   private static int amountOfNumber = 0;
